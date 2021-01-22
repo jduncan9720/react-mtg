@@ -17,6 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/jduncan9720/mtnTrails-PC.git"
   },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
