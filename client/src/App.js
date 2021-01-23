@@ -1,7 +1,9 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import Callartist from './components/Callartist'
+import Display from './components/Display'
 import React, {useState} from 'react'
+
 
 function App() {
   const name = "Josh";
@@ -10,6 +12,7 @@ function App() {
     <div>
     <Navbar name={name} name2={name2} />
     <Callartist />
+    <Display />
     {/* <Router>
       <Switch>
         <Route exact path="/" component={Body}/>
