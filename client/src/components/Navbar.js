@@ -5,7 +5,7 @@ function Navbar(props) {
     
     
 return(
-<div className="nav">
+<div className="container nav">
     <h1>Hello {props.name} and {props.name2}</h1>
     {props.children}
     

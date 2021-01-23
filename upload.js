@@ -11,23 +11,6 @@ const s3 = new AWS.S3({
     secretAccessKey: process.env.SECRET
 });
 
-// const uploadFile = (file) => {
-
-//     const params = {
-//         Bucket: BUCKET_NAME,
-//         Key: file.originalname,
-//         Body: file.path
-//     };
-
-// return s3.upload(params, function(err,data) {
-//     if (err) {
-//         console.log(err)
-//         throw err;
-//     }
-//     console.log(`File uploaded successfully. ${data.Location}`);
-// })
-// }
-
 const uploadFile = multer({
     storage: multers3({
       s3: s3,
@@ -41,9 +24,5 @@ const uploadFile = multer({
       }
     })
   });
-
-//   app.post('/', uploadFile.single('painting_filename'),(req, res) => {
-//     console.log(req.file);
-//   });
 
 module.exports = uploadFile;

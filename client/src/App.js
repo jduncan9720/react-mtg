@@ -1,18 +1,17 @@
 import './App.css';
 import Navbar from './components/Navbar'
-import Body from './components/Body'
+import Callartist from './components/Callartist'
 import Footer from './components/Footer'
 import {Route, Switch, Router} from 'react-router'
 import React, {useState} from 'react'
 
 function App() {
   const name = "Josh";
-  const [name2, setName2] = useState("Name")
+  const [name2, setName2] = useState("Tiffany")
   return (
     <div>
-    <Navbar name={name} name2={name2}>
-      <h1>Josh</h1>
-    </Navbar>
+    <Navbar name={name} name2={name2} />
+    <Callartist />
     {/* <Router>
       <Switch>
         <Route exact path="/" component={Body}/>
