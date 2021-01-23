@@ -1,21 +1,31 @@
 import React from "react";
 
-function Body() {
-    
-return(
-<div className="container">
-<h3>See artist images:</h3>
-          <form id="getArtistImages">
-            <div class="form-group">
-              <label for="allartist_id">Artist Name:</label>
-              <select name="artist_id" class="custom-select mr-sm-2" id="allartist_id">
-                <option selected>Choose...</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-</div>
-);
+import axios from 'axios';
+
+export class Callartist extends React.Component {
+  state = {
+    artists: []
+  }
+  
+  componentDidMount() {
+    axios.get(`http://localhost:3001/api/artists`)
+      .then(res => {
+        const artists = res.data;
+        console.log(artists)
+      })
+  };
+
+ render() {
+
+  return (
+    <div className="container">
+    <ul>
+      
+    </ul>
+      
+    </div>
+  );
+ }
 }
 
-export default Body;
+export default Callartist;
